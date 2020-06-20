@@ -44,7 +44,7 @@ You can train the model from scratch by the following command (in google colab):
 - `attn_model`              - type of attention model: (dot/general/concat)
 - `device`                  - set the device (cpu or cuda, default: cpu)
 - `hidden-size`             - size of the feature space (default: 500 )
-- `teacher_forcing_ratio`   - probability for using the current target word as the decoder’s next input rather than using the decoder’s guess.
+- `teacher_forcing_ratio`   - probability for using the current target word as the decoder’s next input rather than using the decoder’s guess (default: 1.0)
 - `batch_size`              - batch size (default: 64)
 - `epochs`                  - number of iterations (default: 5000)
 - `lr`                      - learning rate  (default: 0.0001)
@@ -66,7 +66,7 @@ To chat with the chatbot, run the following command (in google colab):
 - `attn_model`              - type of attention model: (dot/general/concat)
 - `device`                  - set the device (cpu or cuda, default: cpu)
 - `hidden-size`             - size of the feature space (default: 500 )
-- `checkpoint`              - checkpoint for the model loading
+- `checkpoint`              - checkpoint for the model loading (default: 5000)
 - `min_count`               - minimum count of a word (default: 3)
 - `max_length`              - maximum length of a sentence (default: 10)
 - `encoder_n_layers`        - number of layers in the encoder RNN (default: 2)
@@ -99,7 +99,13 @@ Command to run tensorboard(in google colab):
 
 The model was trained on colab for 5000 iterations which took around 16 minutes for `max_length=10` and `min_count=3`.
 I tried the model with different hyperparameters as well which didn't produce better results which explains the importance of choosing the right `max_length` and `min_count` values.
+The average-loss kept on decreasing, training for more iterations should decrease it further.
+
+<img src='readme_images/loss.png'>  
+
 One fascinating thing was that the bot replied with *i don't know* whenever it didn't understand the question.
+
+
 
 ## 7. Credits
 
@@ -108,3 +114,4 @@ I followed the [Pytorch](https://pytorch.org/tutorials/beginner/chatbot_tutorial
  
  
  
+
