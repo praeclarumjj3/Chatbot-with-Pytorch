@@ -1,0 +1,43 @@
+> Hi
+Bot: hi . . . . .
+> What u doing?
+Bot: i m going to work . . .
+> Nice
+Bot: you re not . . .
+> I am reading Sapiens
+Error: Encountered unknown word.
+> Ahh bad for you
+Bot: i will . you see the limit .
+> Okaay Show me what you got
+Error: Encountered unknown word.
+> Okay show me what you got
+Bot: what ? ! ! ! !
+> Show me
+Bot: no . . . . .
+> Haha you are afraid of me
+Error: Encountered unknown word.
+> You are afraid of me
+Bot: you are not . . .
+> I am not
+Bot: you re not . . .
+> I am jj
+Error: Encountered unknown word.
+> Nice
+Bot: you re not . . .
+> You are funny
+Bot: i m fine . . . .
+> Where are you from?
+Bot: southern . . . . .
+> So how are you
+Bot: what are you doing ? !
+> Bothering you
+Bot: i m not gonna hurt you .
+> Thanks
+Bot: you re a good man . . .
+> Yes
+Bot: i m glad . . . .
+> You should be
+Bot: i m sorry i m not . .
+> Bye
+Bot: bye . . . . .
+> quit
