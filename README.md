@@ -38,12 +38,12 @@ This will create a formatted .txt file named **formatted_movie_lines.txt** with 
 
 You can train the model from scratch by the following command (in google colab):
 ```
-! python3 chatbot_train.py --attn_model [NAME_OF_ATTENTION_MODEL] --device ['cpu' or 'cuda'] --hidden-size [SIZE] --teacher_forcing_ratio [PROBABILITY] --batch_size [BATCH_SIZE] --epochs [NUMBER_OF_ITERATIONS] --lr [LEARNING_RATE]  --min_count [MIN_COUNT_FOR_WORDS] --max_length [MAX_LENGTH_OF_SENTENCE] --encoder_n_layers [NUMBER] --decoder_n_layers [NUMBER]
+! python3 chatbot_train.py --attn_model [NAME_OF_ATTENTION_MODEL] --device ['cpu' or 'cuda'] --hidden_size [SIZE] --teacher_forcing_ratio [PROBABILITY] --batch_size [BATCH_SIZE] --epochs [NUMBER_OF_ITERATIONS] --lr [LEARNING_RATE]  --min_count [MIN_COUNT_FOR_WORDS] --max_length [MAX_LENGTH_OF_SENTENCE] --encoder_n_layers [NUMBER] --decoder_n_layers [NUMBER]
 
 ```
 - `attn_model`              - type of attention model: (dot/general/concat)
 - `device`                  - set the device (cpu or cuda, default: cpu)
-- `hidden-size`             - size of the feature space (default: 500 )
+- `hidden_size`             - size of the feature space (default: 500 )
 - `teacher_forcing_ratio`   - probability for using the current target word as the decoder’s next input rather than using the decoder’s guess (default: 1.0)
 - `batch_size`              - batch size (default: 64)
 - `epochs`                  - number of iterations (default: 5000)
@@ -60,12 +60,12 @@ This trains the model and puts the checkpoints inside a `model` folder and logs 
 To chat with the chatbot, run the following command (in google colab):
 
 ```
-! python3 chatbot_test.py  ---attn_model [NAME_OF_ATTENTION_MODEL] --device ['cpu' or 'cuda'] --hidden-size [SIZE] --checkpoint [MODEL_CHECKPOINT_TO_BE_LOADED] --min_count [MIN_COUNT_FOR_WORDS] --max_length [MAX_LENGTH_OF_SENTENCE] --encoder_n_layers [NUMBER] --decoder_n_layers [NUMBER]
+! python3 chatbot_test.py  ---attn_model [NAME_OF_ATTENTION_MODEL] --device ['cpu' or 'cuda'] --hidden_size [SIZE] --checkpoint [MODEL_CHECKPOINT_TO_BE_LOADED] --min_count [MIN_COUNT_FOR_WORDS] --max_length [MAX_LENGTH_OF_SENTENCE] --encoder_n_layers [NUMBER] --decoder_n_layers [NUMBER]
 
 ```
 - `attn_model`              - type of attention model: (dot/general/concat)
 - `device`                  - set the device (cpu or cuda, default: cpu)
-- `hidden-size`             - size of the feature space (default: 500 )
+- `hidden_size`             - size of the feature space (default: 500 )
 - `checkpoint`              - checkpoint for the model loading (default: 5000)
 - `min_count`               - minimum count of a word (default: 3)
 - `max_length`              - maximum length of a sentence (default: 10)
@@ -110,8 +110,3 @@ One fascinating thing was that the bot replied with *i don't know* whenever it d
 ## 7. Credits
 
 I followed the [Pytorch](https://pytorch.org/tutorials/beginner/chatbot_tutorial.html) tutorial to learn and implement this chatbot.
- 
- 
- 
- 
-
